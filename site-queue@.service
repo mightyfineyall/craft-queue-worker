@@ -1,0 +1,15 @@
+[Unit]
+Description=[SITE NAME] Queue Worker %I
+After=network.target
+After=mysql.service
+Requires=mysql.service
+
+[Service]
+User=[SITE USER]
+Group=[SITE USER GROUP]
+ExecStart=/usr/bin/nice -n 10 /usr/bin/php [CRAFT DIRECTORY] queue/listen --verbose
+Restart=on-failure
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
