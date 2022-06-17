@@ -15,4 +15,5 @@ Variables in both files are enclosed in braces and need to be modified. You will
 10. Add contents of srvc.sh with variables replaced
 11. Type `sudo crontab -e`
 12. Add the contents of crontab to the bottom
-13. To verify, type `journalctl -f -u site-queue@*.service`
+13. Type `sudo service cron restart`
+14. To verify, type `journalctl -f -u site-queue@*.service`
