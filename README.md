@@ -5,7 +5,7 @@ Variables in both files are enclosed in braces and need to be modified. You will
 
 ## Steps:
 1. Disable Craft's queue runner by adding `'runQueueAutomatically' => false,` to the general.php file in the craft/config folder
-2. Login as root
+2. SSH into server as root
 4. Type `sudo nano /etc/systemd/system/site-queue@.service`
 5. Add contents of site-queue@.service with variables replaced
 6. Type `sudo systemctl start site-queue@{1..2}`
