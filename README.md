@@ -1,5 +1,5 @@
 # craft-queue-worker
-Adds a queue worker to an Ubuntu system for Craft CMS.
+Adds a queue worker to an Ubuntu system for Craft CMS. This will run the Craft queue for a site every sixty seconds, and email you if the queue worker stops.
 
 Variables in both files are enclosed in braces and need to be modified. You will need a unique name for each queue you want to run, site is a generic placeholder.
 
